@@ -30,43 +30,43 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**🦁 LionTaggerBot**\n ile Grubunuzdakı Nerdeyse Tüm Üyelere Etiket Ata bilirim \nKomutlar için =======> /help yazın**",
+  await event.reply("**🦁 Werab_tag_bot**\n ile Grubunuzdakı Nerdeyse Tüm Üyelere Etiket Ata bilirim \nKomutlar için =======> /komek yazın**",
                     buttons=(
                    
-		      [Button.url('Beni Gruba Ekle ➕', 'https://t.me/LionTaggerBot?startgroup=a')],
-                      [Button.url('Support🛠', 'https://t.me/AzerbaycanFedarasyonu')],
-                      [Button.url('Resmi Kanal📣', 'https://t.me/DexBots')],
-		      [Button.url('Developer👨🏻‍💻', 'https://t.me/DexRoFF')],
+		      [Button.url('Məni Gruba At ➕', 'https://t.me/Werab_tag_bot?startgroup=a')],
+                      [Button.url('ASO PAYTAXT QRUP🛠', 'https://t.me/WerabliAnlar')],
+                      [Button.url('ASO RƏSMİ📣', 'https://t.me/ASOresmi')],
+		      [Button.url('SAHİBİM👨🏻‍💻', 'https://t.me/ismiyev95')],
                     ),
                     link_preview=False
                    )
-@client.on(events.NewMessage(pattern="^/help$"))
+@client.on(events.NewMessage(pattern="^/komek$"))
 async def help(event):
-  helptext = "**🦁 LionTaggerBot Komutları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/tektag sebeb - Üyeleri Tek Tek Etiketler**\n\n**/admins sebeb - Yöneticileri Tek Tek Tag Eder**\n\n**/start - botu başlatır**"
+  helptext = "**🦁 Werab_tag_bot Komutları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/tektag sebeb - Üyeleri Tek Tek Etiketler**\n\n**/admins sebeb - Yöneticileri Tek Tek Tag Eder**\n\n**/start - botu başlatır**"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Beni Gruba Ekle➕', 'https://t.me/LionTaggerBot?startgroup=a')],
-                      [Button.url('Support👨‍💻', 'https://t.me/AzerbaycanFedarasyonu')],
-                      [Button.url('Resmi Kanal🔖', 'https://t.me/DexBots')],
-		      [Button.url('Developer🧑‍🔧', 'https://t.me/DexRoFF')],
+                      [Button.url('Beni Gruba Ekle➕', 'https://t.me/Werab_tag_bot?startgroup=a')],
+                      [Button.url('ASO PAYTAXT QRUP👨‍💻', 'https://t.me/WerabliAnlar')],
+                      [Button.url('ASO RƏSMİ🔖', 'https://t.me/ASOresmi')],
+		      [Button.url('SAHİBİM🧑‍🔧', 'https://t.me/ismiyev95')],
                     ),
                     link_preview=False
                    )
 	
 @client.on(events.NewMessage(pattern="^/reklam$"))
 async def help(event):
-  helptext = "**Çok özellikleri Etiket Botu Bulmaya Çalışan Grub Sahibleri @LuciTaggerBot Size Göre:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @LuciTaggerBot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
+  helptext = "**Çok özellikleri Etiket Botu Bulmaya Çalışan Grub SahibleriBoWerab_tag_bot Size Göre:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @Werab_tag_bot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Botu Gruba Ekle➕', 'https://t.me/LionTaggerBot?startgroup=a')],
+                      [Button.url('Botu Gruba At➕', 'https://t.me/Werab_tag_bot?startgroup=a'
                     ),
                     link_preview=False
                    )
 	
 	
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
-async def cancel(event):
+@client.on(events.NewMessage(pattern='^(?i)/dur'))
+async def dur(event):
   global emoji_calisan
   emoji_calisan.remove(event.chat_id)
 
@@ -98,9 +98,9 @@ async def mentionall(event):
     if msg == None:
         return await event.respond("**Geçmiş mesajlar için etiket ede bilmiom**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Etiket Yapmak için sebeb yok❗️")
+    return await event.respond("Etiket Yapmak için sebeb yok @WerabliAnlar❗️")
   else:
-    return await event.respond("**Etikete Başlamak için sebeb yazın...!**")
+    return await event.respond("**Etikete Başlamak için sebeb yazın @WerabliAnlar...!**")
   
   if mode == "text_on_cmd":
     emoji_calisan.append(event.chat_id)
@@ -110,7 +110,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in emoji_calisan:
-        await event.respond("** Etiket işlemi başarıyla durduruldu❌**")
+        await event.respond("** durdum @WerabliAnlar❌**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -128,7 +128,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in emoji_calisan:
-        await event.respond("Işlem Başarıyla Durduruldu\n\n**Buda sizin reklamınız ola bilir @LuciBots**❌")
+        await event.respond("Işlem Başarıyla Durduruldu\n\n**Burda sizin reklamınız ola bilər https://t.me/WerabliAnlar**❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -176,7 +176,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("Işlem Başarıyla Durduruldu\n\n**Buda sizin reklamınız ola bilir @LuciBots**❌")
+        await event.respond("Durdum @WerabliAnlar\n\n**Buda sizin reklamınız ola bilir https://t.me/WerabliAnlar**❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -194,7 +194,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("işlem başarıyla durduruldu❌")
+        await event.respond("durdum @WerabliAnlar❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -202,7 +202,7 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@client.on(events.NewMessage(pattern='^(?i)/dur'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
@@ -229,7 +229,7 @@ async def mentionall(event):
     if msg == None:
         return await event.respond("**önceki mesajı etiketleye bilmerim*")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Başlamaq için Sebeb Yazın❗️")
+    return await event.respond("Başlamaq için Sebeb Yazın @WerabliAnlar❗️")
   else:
     return await event.respond("**Işleme başlamağım için sebeb yazın..**")
   
@@ -241,7 +241,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"**👤 - [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
-        await event.respond("**Işlem Başarıyla Durduruldu\n\n**Buda sizin reklamınız ola bilir @LuciBots**❌****")
+        await event.respond("**Durdum @WerabliAnlar\n\n**Burda sizin reklamınız ola bilər https://t.me/WerabliAnlar**❌****")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
@@ -259,7 +259,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in tekli_calisan:
-        await event.respond("Işlem Başarıyla Durduruldu\n\n**Buda sizin reklamınız ola bilir @LuciBots**❌**")
+        await event.respond("Durdum @WerabliAnlar\n\n**Burda sizin reklamınız ola bilər https://t.me/WerabliAnlar**❌**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -267,7 +267,7 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@client.on(events.NewMessage(pattern='^(?i)/dur'))
 async def cancel(event):
   global tekli_calisan
   tekli_calisan.remove(event.chat_id)
@@ -293,5 +293,5 @@ async def mentionall(tagadmin):
 		sleep(0.5)
 
 
-print(">> Bot çalıyor merak etme 🚀 @lucimarka bilgi alabilirsin <<")
+print(">> Bot işləyir artıq 🚀 @ismiyev95 bilgi alabilirsin <<")
 client.run_until_disconnected()
