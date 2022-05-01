@@ -1,2 +1,2 @@
 ### 🚀 Heroku'ya dağıtın
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/HerlockApiniz/ZionTagger)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Zamannismiyev/ZionTagger)
