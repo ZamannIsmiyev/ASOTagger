@@ -40,7 +40,7 @@ async def start(event):
                     ),
                     link_preview=False
                    )
-@client.on(events.NewMessage(pattern="^/komek $"))
+@client.on(events.NewMessage(pattern="^/komek$"))
 async def help(event):
   helptext = "**🦁 ASOTagger_bot Komutları**\n\n**/tag <səbəb> - 5-li Etiket Atar**\n\n**/etag <səbəb> - Emoji ile etiketlər**\n\n**/tektag səbəb - Userleri Tək Tək Etiketler**\n\n**/adminler səbəb - Yöneticileri Tək Tək Tag Edər**\n\n**/start - botu başlatır**"
   await event.reply(helptext,
@@ -53,7 +53,7 @@ async def help(event):
                     link_preview=False
                    )
 	
-@client.on(events.NewMessage(pattern="^/reklam $"))
+@client.on(events.NewMessage(pattern="^/reklam$"))
 async def help(event):
   helptext = "**Çok özellikleri Etiket Botu Bulmaya Çalışan Grub Sahibleri @ASOtagger_bot Size Göre:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Ancaq Yöneticileri etiketləyər\n📌\n\n Böyle Çok özellikli @ASOtagger_bot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
   await event.reply(helptext,
