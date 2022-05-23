@@ -30,11 +30,11 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**🦁 ASOTagger_bot**\n ile Grupunuzdakı Bütün Üserlərə Etiket Ata bilirəm \nKomutlar için =======> /komek yazın**",
+  await event.reply("**🦁 @ASOSONZİRVE ASOTagger_bot**\n ile Grupunuzdakı Bütün Üserlərə Etiket Ata bilirəm \nKomutlar için =======> /komek yazın**",
                     buttons=(
                    
 		      [Button.url('Məni Gruba At ➕', 'https://t.me/ASOtagger_bot?startgroup=a')],
-                      [Button.url('ASO Söhbət Qrupumuz', 'https://t.me/ASOSonZirve')],
+                      [Button.url('Söhbət Qrupumuz✈️', 'https://t.me/ASOSonZirve')],
                       [Button.url('ASO Rəsmi📣', 'https://t.me/ASOresmi')],
 		      [Button.url('Sahibim👨🏻‍💻', 'https://t.me/ismiyev95')],
                     ),
@@ -42,11 +42,11 @@ async def start(event):
                    )
 @client.on(events.NewMessage(pattern="^/komek$"))
 async def help(event):
-  helptext = "**🦁 ASOTagger_bot Komutları**\n\n**/tag <səbəb> - 5-li Etiket Atar**\n\n**/etag <səbəb> - Emoji ile etiketlər**\n\n**/tektag səbəb - Userleri Tək Tək Etiketler**\n\n**/adminler səbəb - Yöneticileri Tək Tək Tag Edər**\n\n**/start - botu başlatır**"
+  helptext = "**🦁 @ASOSONZİRVE ASOTagger_bot Komutları**\n\n**/tag <səbəb> - 5-li Etiket Atar**\n\n**/etag <səbəb> - Emoji ile etiketlər**\n\n**/tektag səbəb - Userleri Tək Tək Etiketler**\n\n**/adminler səbəb - Yöneticileri Tək Tək Tag Edər**\n\n**/start - botu başlatır**"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('Məni Gruba Ekle➕', 'https://t.me/ASOTagger_bot?startgroup=a')],
-                      [Button.url('ASO Söhbət Qrupumuz👨‍💻', 'https://t.me/WerabliAnlar')],
+                      [Button.url('Söhbət Qrupumuz✈️', 'https://t.me/AsoSonZirve')],
                       [Button.url('ASO Rəsmi🔖', 'https://t.me/ASOresmi')],
 		      [Button.url('Sahibim🧑‍🔧', 'https://t.me/ismiyev95')],
                     ),
@@ -128,7 +128,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in emoji_calisan:
-        await event.respond("durdum @WerabliAnlar \n\n**Burda sizin reklamınız ola bilər @ASOSonZirve**🇦🇿")
+        await event.respond("durdum🙁 @ASOSONZİRVE \n\n**Burda sizin reklamınız ola bilər @ASOSonZirve**🇦🇿")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -143,7 +143,7 @@ async def cancel(event):
   emoji_calisan.remove(event.chat_id)
 
 
-@client.on(events.NewMessage(pattern="^/gel ?(.*)"))
+@client.on(events.NewMessage(pattern="^/tag ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
