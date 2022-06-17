@@ -30,10 +30,10 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**🦁 @ASOSONZİRVE ASOTagger_bot**\n ile Grupunuzdakı Bütün Üserlərə Etiket Ata bilirəm \nKomutlar için =======> /komek yazın**",
+  await event.reply("**🦁 @WerabliAnlar ASOTagger_bot**\n ile Grupunuzdakı Bütün Üserlərə Etiket Ata bilirəm \nKomutlar için =======> /komek yazın**",
                     buttons=(
                    
-		      [Button.url('Məni Gruba At ➕', 'https://t.me/ASOtagger_bot?startgroup=a')],
+		      [Button.url('➕ Məni Gruba At ➕', 'https://t.me/ASOtagger_bot?startgroup=a')],
                       [Button.url('Söhbət Qrupumuz✈️', 'https://t.me/WerabliAnlar')],
                       [Button.url('ASO Rəsmi📣', 'https://t.me/ASOresmi')],
 		      [Button.url('Sahibim👨🏻‍💻', 'https://t.me/ismiyev95')],
@@ -42,10 +42,10 @@ async def start(event):
                    )
 @client.on(events.NewMessage(pattern="^/komek$"))
 async def help(event):
-  helptext = "**🦁 @ASOSONZİRVE ASOTagger_bot Komutları**\n\n**/tag <səbəb> - 5-li Etiket Atar**\n\n**/etag <səbəb> - Emoji ile etiketlər**\n\n**/tektag səbəb - Userleri Tək Tək Etiketler**\n\n**/adminler səbəb - Yöneticileri Tək Tək Tag Edər**\n\n**/start - botu başlatır**"
+  helptext = "**🦁 @WerabliAnlar ASOTagger_bot Komutları**\n\n**/tag <səbəb> - 5-li Tag Edər **\n\n**/etag <səbəb> - Emoji ile tag  edər **\n\n**/tektag səbəb - Userleri Tək Tək tag edər **\n\n**/adminler səbəb - Yöneticileri Tək Tək Tag Edər**\n\n**/start - botu başladar**"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Məni Gruba Ekle➕', 'https://t.me/ASOTagger_bot?startgroup=a')],
+                      [Button.url('➕ Məni Gruba Ekle➕', 'https://t.me/ASOTagger_bot?startgroup=a')],
                       [Button.url('Söhbət Qrupumuz✈️', 'https://t.me/WerabliAnlar')],
                       [Button.url('ASO Rəsmi🔖', 'https://t.me/ASOresmi')],
 		      [Button.url('Sahibim🧑‍🔧', 'https://t.me/ismiyev95')],
@@ -58,7 +58,7 @@ async def help(event):
   helptext = "**Çok özellikleri Etiket Botu Bulmaya Çalışan Grub Sahibleri @ASOtagger_bot Size Göre:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Ancaq Yöneticileri etiketləyər\n📌\n\n Böyle Çok özellikli @ASOtagger_bot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Məni Gruba At➕', 'https://t.me/ASOtagger_bot?startgroup=a' )],
+                      [Button.url('➕Məni Gruba At➕', 'https://t.me/ASOtagger_bot?startgroup=a' )],
                     ),
                     link_preview=False
                    )
@@ -100,7 +100,7 @@ async def mentionall(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("tag etmək üçün səbəb yoxdu🙁 @WerabliAnlar 🇦🇿")
   else:
-    return await event.respond("**Etikete Başlamak için sebeb yazın @WerabliAnlar...!**🇦🇿")
+    return await event.respond("**Etikete Başlamaq üçün səbəbb yazın @WerabliAnlar...!**🇦🇿")
   
   if mode == "text_on_cmd":
     emoji_calisan.append(event.chat_id)
@@ -110,7 +110,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in emoji_calisan:
-        await event.respond("** durdum🌹 @ASOSonZirve 🇦🇿**")
+        await event.respond("** durdum🌹 @WerabliAnlar 🇦🇿**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -164,9 +164,9 @@ async def mentionall(event):
     if msg == None:
         return await event.respond("Önceki Mesajlara Cevab Vermeyin")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Başlatmaq üçün səbəb yoxdu🙁 @WerabliAnlar 🇦🇿")
+    return await event.respond("Başlamaq üçün səbəb yoxdu🙁 @WerabliAnlar 🇦🇿")
   else:
-    return await event.respond("Işleme başlamak üçün səbəb yoxdu🙁 @WerabliAnlar ")
+    return await event.respond(" Başlamaq üçün səbəb yoxdu🙁 @WerabliAnlar 🇦🇿")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -231,7 +231,7 @@ async def mentionall(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("Başlamaq üçün Səbəb Yazın @Werablianlar 🇦🇿")
   else:
-    return await event.respond("**Işleme başlamağım üçün səbəb yazın..**🇦🇿")
+    return await event.respond("**Başlamaq üçün səbəb yazın @WerabliAnlar ..**🇦🇿")
   
   if mode == "text_on_cmd":
     tekli_calisan.append(event.chat_id)
