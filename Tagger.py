@@ -35,7 +35,7 @@ async def start(event):
                    
 		      [Button.url('➕ Məni Gruba At ➕', 'https://t.me/ASOtagger_bot?startgroup=a')],
                       [Button.url('Söhbət Qrupumuz✈️', 'https://t.me/WerabliAnlar')],
-                      [Button.url('ASO Rəsmi📣', 'https://t.me/ASOresmi')],
+                      [Button.url('ASO Rəsmi🇦🇿', 'https://t.me/ASOresmi')],
 		      [Button.url('Sahibim👨🏻‍💻', 'https://t.me/ismiyev95')],
                     ),
                     link_preview=False
@@ -128,7 +128,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in emoji_calisan:
-        await event.respond("durdum🙁 @WerabliAnlar \n\n**Burda sizin reklamınız ola bilər @WerabliAnlar**🇦🇿")
+        await event.respond("durdum🌹 @WerabliAnlar 🇦🇿 \n\n**Burda sizin reklamınız ola bilər @WerabliAnlar**🇦🇿")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -274,7 +274,7 @@ async def cancel(event):
 	
 
 
-@client.on(events.NewMessage(pattern="^/adminler ?(.*)"))
+@client.on(events.NewMessage(pattern="^/admintag ?(.*)"))
 async def mentionall(tagadmin):
 
 	if tagadmin.pattern_match.group(1):
