@@ -128,7 +128,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in emoji_calisan:
-        await event.respond("durdum🌹 @WerabliAnlar 🇦🇿 \n\n**Burda sizin reklamınız ola bilər @WerabliAnlar**🇦🇿")
+        await event.respond("durdum🌹 @WerabliAnlar 🇦🇿 \n\n**Burda sizində reklamınız ola bilərdi @WerabliAnlar**🇦🇿")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -274,7 +274,7 @@ async def cancel(event):
 	
 
 
-@client.on(events.NewMessage(pattern="^/admintag ?(.*)"))
+@client.on(events.NewMessage(pattern="^/adminst ?(.*)"))
 async def mentionall(tagadmin):
 
 	if tagadmin.pattern_match.group(1):
